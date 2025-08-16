@@ -20,12 +20,12 @@ const Experience = () => {
     },
     {
       title: 'OpenG2P Platform DevOps Engineer',
-      company: 'Atlas Computer Technology - Government Digital Transformation Project',
+      company: 'Government Digital Transformation Project',
       location: 'Ethiopia · Government',
       period: 'August 2025 - Present',
       description: "Leading DevOps implementation for Ethiopia's national OpenG2P platform for the Ministry of Women & Social Affairs.",
       achievements: [
-        'Architected dual-infrastructure: Ethio Telecom cloud (7 VMs) and MOWSA on-premise (6 VMs), 85% completion',
+        'Architected dual-infrastructure across Ethio Telecom cloud and MOWSA on-premises; 85% completion',
         'Deployed enterprise Kubernetes clusters using RKE2 with Rancher, Istio service mesh, and Keycloak SSO',
         'Configured HA infrastructure with Hardware RAID 1+0, XCP-ng hypervisor, and WireGuard VPN',
         'Implementing beneficiary data migration from ODK to OpenG2P for social protection programs'

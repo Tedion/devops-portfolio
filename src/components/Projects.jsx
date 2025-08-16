@@ -5,64 +5,65 @@ import { ExternalLink, Github, Cloud, Container, Shield, BarChart3 } from 'lucid
 const Projects = () => {
   const projects = [
     {
-      title: 'Multi-Cloud Infrastructure Platform',
-      description: 'Designed and implemented a multi-cloud infrastructure solution using Terraform, spanning AWS, Azure, and GCP with automated failover capabilities and cost optimization.',
+      title: 'National OpenG2P Platform Infrastructure',
+      description: 'Designed and built the core infrastructure for Ethiopia\'s national OpenG2P platform with secure, highly-available Kubernetes, SSO, and network overlays.',
       icon: Cloud,
-      technologies: ['Terraform', 'AWS', 'Azure', 'GCP', 'Python'],
+      technologies: ['RKE2', 'Rancher', 'Istio', 'Keycloak', 'XCP-ng', 'WireGuard', 'Helm', 'Terraform'],
       features: [
-        'Auto-scaling across multiple cloud providers',
-        'Cost optimization with 40% reduction',
-        'Disaster recovery automation',
-        'Infrastructure monitoring and alerting'
+        'Enterprise-grade RKE2 clusters managed with Rancher',
+        'Zero-trust SSO with Keycloak and fine-grained RBAC',
+        'Service mesh traffic policies and mTLS via Istio',
+        'HA storage and hardware RAID for durability',
+        'Secure site-to-site connectivity using WireGuard'
       ],
       github: '#',
       demo: '#',
-      image: '🏗️'
+      image: '🏛️'
     },
     {
-      title: 'Kubernetes CI/CD Pipeline',
-      description: 'Built a complete CI/CD pipeline using GitHub Actions, deploying microservices to Kubernetes with automated testing, security scanning, and progressive deployments.',
+      title: 'Mobile Banking Platform Modernization',
+      description: 'Containerized Java-based mobile banking workloads and introduced CI/CD and centralized logging for enterprise financial services.',
       icon: Container,
-      technologies: ['Kubernetes', 'GitHub Actions', 'Docker', 'Helm', 'ArgoCD'],
+      technologies: ['Docker', 'Kubernetes', 'Nginx', 'ActiveMQ', 'WildFly', 'MySQL', 'Jenkins', 'ELK'],
       features: [
-        'Automated security scanning',
-        'Blue-green deployments',
-        'Rollback mechanisms',
-        'Multi-environment promotion'
+        '99.95% uptime across critical banking services',
+        'Jenkins pipelines reduced deploys from 4h to 15m',
+        'Centralized logs with ELK and actionable alerts',
+        'Hybrid cloud with cost optimization (~35%)'
       ],
       github: '#',
       demo: '#',
-      image: '🚀'
+      image: '💳'
     },
     {
-      title: 'Monitoring & Observability Stack',
-      description: 'Implemented comprehensive monitoring solution using Prometheus, Grafana, and ELK stack for real-time application and infrastructure monitoring with custom dashboards.',
+      title: 'Cloud-Native Platform for AI/Automation Workloads',
+      description: 'Provisioned GPU-ready RKE2 clusters and standardized Helm-based deployments for internal platform teams.',
       icon: BarChart3,
-      technologies: ['Prometheus', 'Grafana', 'Elasticsearch', 'Kibana', 'AlertManager'],
+      technologies: ['RKE2', 'Terraform', 'Terragrunt', 'Helm', 'Teleport', 'Prometheus', 'Grafana', 'Mimir'],
       features: [
-        'Real-time metrics and logging',
-        'Custom alerting rules',
-        'Performance dashboards',
-        'SLA monitoring and reporting'
+        'GPU-enabled clusters for data and automation apps',
+        'Shared Helm stacks for 5+ environments',
+        'Teleport for secure, identity-aware access',
+        'Observability via Prometheus/Grafana/Mimir'
       ],
       github: '#',
       demo: '#',
-      image: '📊'
+      image: '🤖'
     },
     {
-      title: 'Secure Infrastructure Automation',
-      description: 'Developed secure infrastructure automation with Ansible, implementing security best practices, compliance scanning, and automated remediation for enterprise environments.',
+      title: 'Beneficiary Data Migration to OpenG2P',
+      description: 'Planned and implemented data migration workflows from ODK to OpenG2P with validation, auditability, and rollbacks.',
       icon: Shield,
-      technologies: ['Ansible', 'AWS Config', 'Security Hub', 'Compliance', 'Python'],
+      technologies: ['ODK', 'OpenG2P', 'Python', 'Airflow (planned)', 'PostgreSQL'],
       features: [
-        'Automated compliance checking',
-        'Security hardening playbooks',
-        'Vulnerability remediation',
-        'Audit trail and reporting'
+        'Schema mapping and transformation planning',
+        'Validation and reconciliation checks',
+        'Rollback strategy and audit trails',
+        'Incremental migration pipelines (phased)'
       ],
       github: '#',
       demo: '#',
-      image: '🔒'
+      image: '📥'
     }
   ]
 
@@ -99,7 +100,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Some of my recent DevOps implementations and infrastructure solutions
+            Work that reflects real impact across government, banking, and platform engineering
           </p>
         </motion.div>
 
