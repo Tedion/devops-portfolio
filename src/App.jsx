@@ -6,6 +6,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
+import Certifications from './components/Certifications'
 import Footer from './components/Footer'
 import Dashboard from './components/Dashboard'
 
@@ -19,6 +20,7 @@ function App() {
         <Skills />
         <Projects />
         <Experience />
+        <Certifications />
         <Contact />
         {import.meta.env.VITE_SHOW_ANALYTICS_DASHBOARD === 'true' && <Dashboard />}
       </main>
