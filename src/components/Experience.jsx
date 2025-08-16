@@ -1,148 +1,121 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Briefcase } from 'lucide-react'
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: 'Senior DevOps Engineer',
-      company: 'Tech Innovations Ltd.',
-      location: 'Remote',
-      period: '2022 - Present',
-      description: 'Led the transformation of legacy infrastructure to cloud-native solutions, reducing deployment time by 80% and improving system reliability to 99.9% uptime.',
-      achievements: [
-        'Architected and implemented Kubernetes-based microservices platform serving 1M+ users',
-        'Designed CI/CD pipelines serving 50+ development teams with automated testing and deployment',
-        'Established comprehensive monitoring and observability practices reducing MTTR by 70%',
-        'Mentored junior engineers and led DevOps best practices adoption across organization'
-      ],
-      technologies: ['AWS', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Prometheus']
-    },
-    {
-      title: 'DevOps Engineer',
-      company: 'Cloud Solutions Pro',
-      location: 'San Francisco, CA',
-      period: '2020 - 2022',
-      description: 'Specialized in AWS cloud migrations and infrastructure automation, helping clients reduce infrastructure costs by 40% while improving performance and scalability.',
-      achievements: [
-        'Successfully migrated 20+ applications to AWS cloud with zero downtime',
-        'Implemented Infrastructure as Code using Terraform, managing 500+ resources',
-        'Built automated backup and disaster recovery solutions for enterprise clients',
-        'Reduced operational costs by implementing auto-scaling and resource optimization'
-      ],
-      technologies: ['AWS', 'Terraform', 'Ansible', 'Jenkins', 'Docker']
-    },
-    {
-      title: 'System Administrator',
-      company: 'Enterprise Corp',
-      location: 'New York, NY',
-      period: '2018 - 2020',
-      description: 'Managed hybrid infrastructure environments and began automation initiatives that laid the foundation for DevOps transformation.',
-      achievements: [
-        'Maintained 100+ servers across multiple data centers with 99.5% uptime',
-        'Implemented configuration management with Ansible, reducing manual tasks by 60%',
-        'Established backup and monitoring procedures for critical business applications',
-        'Led security hardening initiatives and compliance audits'
-      ],
-      technologies: ['Linux', 'VMware', 'Ansible', 'Nagios', 'Bash']
-    }
-  ]
+	const experiences = [
+		{
+			date: 'June 2025 - Present',
+			title: 'Backend/DevOps Engineer',
+			company: 'Centriweb - Remote, Auckland, New Zealand',
+			achievements: [
+				'Delivering backend and DevOps solutions supporting scalable, cloud-based applications for international clients',
+				'Implementing infrastructure automation with Terraform, ensuring consistent, auditable, and repeatable cloud deployments',
+				'Collaborating cross-functionally to streamline CI/CD pipelines and deployment strategies, accelerating release cycles',
+				'Monitoring and maintaining cloud resources for performance, reliability, and cost-efficiency using industry best practices',
+				'Driving continuous improvement initiatives, integrating additional DevOps tools to optimize workflow and system resilience'
+			]
+		},
+		{
+			date: 'August 2025 - Present',
+			title: 'OpenG2P Platform DevOps Engineer',
+			company: 'Atlas Computer Technology - Government Digital Transformation Project',
+			achievements: [
+				"Leading DevOps implementation for Ethiopia's national OpenG2P (Open Government to Person) platform serving Ministry of Women & Social Affairs",
+				'Architected dual-infrastructure deployment: Ethio Telecom cloud (7 VMs) and MOWSA on-premise (6 VMs) with 85% completion rate',
+				'Deployed enterprise Kubernetes clusters using RKE2 with Rancher management, Istio service mesh, and Keycloak identity management',
+				'Configured high-availability infrastructure with Hardware RAID 1+0, XCP-ng hypervisor, and WireGuard VPN for secure remote access',
+				'Implementing comprehensive beneficiary data migration from ODK platform to OpenG2P, supporting Ethiopia\'s social protection programs'
+			]
+		},
+		{
+			date: 'April 2025 - June 2025',
+			title: 'Senior DevOps Engineer (Cloud & Platform Team)',
+			company: 'Exponent.ch - Remote Contract',
+			achievements: [
+				'Architected scalable cloud-native infrastructure with RKE2 Kubernetes clusters using Terraform and Terragrunt, achieving 40% faster deployment times',
+				'Deployed and managed NVIDIA GPU-enabled RKE2 Kubernetes clusters supporting AI/ML workloads including n8n, Langfuse, LibreChat, and ClickHouse',
+				'Streamlined application deployment pipelines using Helm with modularized shared-stacks, enabling rapid rollout across 5+ environments',
+				'Integrated Teleport for secure, identity-aware access to Kubernetes clusters, enhancing compliance and reducing security incidents by 60%',
+				'Designed full-stack observability layer with Prometheus, Grafana, and Mimir, achieving 99.9% system visibility and proactive issue detection',
+				'Led secret injection automation via Lade and 1Password, implementing zero-trust security principles across infrastructure'
+			]
+		},
+		{
+			date: 'February 2023 - June 2025',
+			title: 'DevOps Engineer',
+			company: 'Atlas Computer Technology',
+			achievements: [
+				'Containerized mobile banking applications with Docker and Kubernetes, serving 1M+ active users across 6 major Ethiopian banks',
+				'Configured high-availability mobile banking infrastructure with Nginx, ActiveMQ, WildFly, and MySQL, achieving 99.95% uptime',
+				'Managed hybrid cloud infrastructure using Proxmox and AWS, optimizing costs by 35% while maintaining enterprise performance',
+				'Integrated ELK stack for centralized logging, processing 10TB+ daily logs with real-time analytics and alerting',
+				'Built enterprise CI/CD pipelines with Jenkins for Maven-based Java applications, reducing deployment time from 4 hours to 15 minutes'
+			]
+		},
+		{
+			date: 'September 2021 - January 2023',
+			title: 'Junior DevOps Engineer',
+			company: 'Atlas Computer Technology',
+			achievements: [
+				'Managed on-premise cloud infrastructure using Proxmox virtualization, supporting 50+ virtual machines for banking applications',
+				'Deployed and tested USSD and mobile banking solutions in UAT environments, ensuring 100% functional compliance before production',
+				'Implemented comprehensive security policies and monitoring with Zabbix, Grafana, and ELK stack, establishing baseline security posture',
+				'Collaborated with development teams to ensure application readiness, reducing production issues by 70% through robust testing'
+			]
+		}
+	]
 
-  return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Professional Experience</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            My journey in DevOps and cloud engineering, building scalable solutions
-          </p>
-        </motion.div>
+	return (
+		<section id="experience" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8 }}
+					viewport={{ once: true }}
+					className="text-center mb-16"
+				>
+					<h2 className="text-4xl font-bold text-gray-900 mb-4">Professional Journey</h2>
+					<p className="text-xl text-gray-600">
+						Building mission-critical infrastructure across Ethiopia's financial and government sectors
+					</p>
+				</motion.div>
 
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-primary-200"></div>
+				<div className="relative max-w-4xl mx-auto">
+					{/* Timeline Line */}
+					<div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-primary-600"></div>
 
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className={`relative flex items-center ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-
-                {/* Content Card */}
-                <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${
-                  index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                }`}>
-                  <div className="bg-white rounded-xl shadow-lg p-6 card-hover">
-                    {/* Header */}
-                    <div className="mb-4">
-                      <div className="flex items-center text-sm text-primary-600 mb-2">
-                        <Calendar size={16} className="mr-2" />
-                        {exp.period}
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{exp.title}</h3>
-                      <div className="flex items-center text-gray-600 mb-2">
-                        <Briefcase size={16} className="mr-2" />
-                        {exp.company}
-                      </div>
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <MapPin size={16} className="mr-2" />
-                        {exp.location}
-                      </div>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
-
-                    {/* Achievements */}
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
-                      <ul className="space-y-1">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start">
-                            <div className="w-1.5 h-1.5 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            <span className="text-gray-700 text-sm">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Technologies */}
-                    <div>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+					<div className="space-y-8">
+						{experiences.map((job, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, x: 40 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.6, delay: index * 0.1 }}
+								viewport={{ once: true }}
+								className="relative ml-20"
+							>
+								<div className="absolute -left-14 top-6 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg"></div>
+								<div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6">
+									<div className="text-orange-500 text-sm font-semibold mb-2 uppercase tracking-wider">{job.date}</div>
+									<h3 className="text-xl font-bold text-gray-900 mb-1">{job.title}</h3>
+									<div className="text-primary-600 font-semibold mb-4">{job.company}</div>
+									<ul className="space-y-3">
+										{job.achievements.map((achievement, i) => (
+											<li key={i} className="flex items-start gap-3">
+												<span className="mt-2 w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
+												<span className="text-gray-700 leading-relaxed text-sm">{achievement}</span>
+											</li>
+										))}
+									</ul>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	)
 }
 
 export default Experience
