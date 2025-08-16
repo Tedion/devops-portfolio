@@ -20,6 +20,10 @@ const Hero = () => {
             className="space-y-8"
           >
             <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                Open to Remote Opportunities
+              </div>
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

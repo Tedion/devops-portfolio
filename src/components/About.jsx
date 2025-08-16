@@ -22,7 +22,7 @@ const About = () => {
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            DevOps Engineer with a passion for automation and cloud technologies
+            DevOps Engineer with a passion for automation and cloud technologies — open to remote opportunities
           </p>
         </motion.div>
 
