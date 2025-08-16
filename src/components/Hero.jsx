@@ -151,21 +151,14 @@ const Hero = () => {
 
               {/* Tech icons collage */}
               <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
-                  CI/CD Pipeline
-                </div>
-                <div className="absolute top-10 -left-10 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
-                  Docker
-                </div>
-                <div className="absolute top-20 -right-12 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
-                  Kubernetes
-                </div>
-                <div className="absolute bottom-12 left-1/3 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
-                  Cloud
-                </div>
-                <div className="absolute bottom-0 right-0 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
-                  Observability
-                </div>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="absolute top-10 -left-10 w-10 h-10 drop-shadow" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="absolute top-16 -right-12 w-10 h-10 drop-shadow" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" className="absolute -top-6 left-1/2 -translate-x-1/2 w-10 h-10 drop-shadow" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" className="absolute bottom-12 left-1/3 w-10 h-10 drop-shadow" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" className="absolute bottom-2 right-10 w-10 h-10 drop-shadow" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" className="absolute top-28 left-1/4 w-10 h-10 drop-shadow" />
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/helm.svg" alt="Helm" className="absolute bottom-24 right-1/4 w-9 h-9 drop-shadow opacity-90" />
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/grafana.svg" alt="Grafana" className="absolute top-1/3 right-1/3 w-9 h-9 drop-shadow opacity-90" />
               </div>
             </div>
           </motion.div>
