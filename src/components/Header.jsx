@@ -42,11 +42,8 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <button
-              onClick={() => scrollToSection('#home')}
-              className="text-2xl font-bold gradient-text hover:scale-105 transition-transform"
-            >
-              Teddy Abera
+            <button onClick={() => scrollToSection('#home')} className="text-2xl font-bold gradient-text hover:scale-105 transition-transform">
+              💻 Teddy Abera
             </button>
           </div>
 
@@ -68,10 +65,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary-600 p-2"
-            >
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-primary-600 p-2">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>

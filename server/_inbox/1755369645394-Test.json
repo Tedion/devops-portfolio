@@ -1,0 +1,7 @@
+{
+  "name": "Test",
+  "email": "test@example.com",
+  "subject": "Hello",
+  "message": "This is a test message body",
+  "receivedAt": "2025-08-16T18:40:45.394Z"
+}

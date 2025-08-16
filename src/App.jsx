@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Projects />
         <Experience />
         <Contact />
+        <Dashboard />
       </main>
       <Footer />
     </div>

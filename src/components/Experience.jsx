@@ -5,46 +5,76 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react'
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior DevOps Engineer',
-      company: 'Tech Innovations Ltd.',
-      location: 'Remote',
-      period: '2022 - Present',
-      description: 'Led the transformation of legacy infrastructure to cloud-native solutions, reducing deployment time by 80% and improving system reliability to 99.9% uptime.',
+      title: 'Backend/DevOps Engineer',
+      company: 'Centriweb - Remote, Auckland, New Zealand',
+      location: 'Remote · Auckland, NZ',
+      period: 'June 2025 - Present',
+      description: 'Delivering backend and DevOps solutions supporting scalable, cloud-based applications for international clients.',
       achievements: [
-        'Architected and implemented Kubernetes-based microservices platform serving 1M+ users',
-        'Designed CI/CD pipelines serving 50+ development teams with automated testing and deployment',
-        'Established comprehensive monitoring and observability practices reducing MTTR by 70%',
-        'Mentored junior engineers and led DevOps best practices adoption across organization'
+        'Implementing infrastructure automation with Terraform for consistent and auditable deployments',
+        'Streamlining CI/CD pipelines and deployment strategies to accelerate release cycles',
+        'Monitoring and maintaining cloud resources for performance, reliability, and cost-efficiency',
+        'Driving continuous improvement by integrating additional DevOps tools to optimize workflows'
       ],
-      technologies: ['AWS', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Prometheus']
+      technologies: ['Terraform', 'CI/CD', 'Cloud', 'Automation']
+    },
+    {
+      title: 'OpenG2P Platform DevOps Engineer',
+      company: 'Atlas Computer Technology - Government Digital Transformation Project',
+      location: 'Ethiopia · Government',
+      period: 'August 2025 - Present',
+      description: "Leading DevOps implementation for Ethiopia's national OpenG2P platform for the Ministry of Women & Social Affairs.",
+      achievements: [
+        'Architected dual-infrastructure: Ethio Telecom cloud (7 VMs) and MOWSA on-premise (6 VMs), 85% completion',
+        'Deployed enterprise Kubernetes clusters using RKE2 with Rancher, Istio service mesh, and Keycloak SSO',
+        'Configured HA infrastructure with Hardware RAID 1+0, XCP-ng hypervisor, and WireGuard VPN',
+        'Implementing beneficiary data migration from ODK to OpenG2P for social protection programs'
+      ],
+      technologies: ['RKE2', 'Rancher', 'Istio', 'Keycloak', 'XCP-ng', 'WireGuard']
+    },
+    {
+      title: 'Senior DevOps Engineer (Cloud & Platform Team)',
+      company: 'Exponent.ch - Remote Contract',
+      location: 'Remote',
+      period: 'April 2025 - June 2025',
+      description: 'Architected scalable cloud-native infrastructure and deployment pipelines for AI/ML workloads.',
+      achievements: [
+        'Built RKE2 Kubernetes clusters with Terraform/Terragrunt; 40% faster deployments',
+        'Managed NVIDIA GPU-enabled clusters for n8n, Langfuse, LibreChat, ClickHouse',
+        'Streamlined Helm-based deployments with shared-stacks across 5+ environments',
+        'Integrated Teleport for secure, identity-aware cluster access; reduced incidents by 60%',
+        'Designed observability with Prometheus, Grafana, and Mimir for 99.9% visibility',
+        'Led secret injection automation via Lade and 1Password (zero-trust)'
+      ],
+      technologies: ['RKE2', 'Terraform', 'Terragrunt', 'Helm', 'Teleport', 'Prometheus', 'Grafana', 'Mimir']
     },
     {
       title: 'DevOps Engineer',
-      company: 'Cloud Solutions Pro',
-      location: 'San Francisco, CA',
-      period: '2020 - 2022',
-      description: 'Specialized in AWS cloud migrations and infrastructure automation, helping clients reduce infrastructure costs by 40% while improving performance and scalability.',
+      company: 'Atlas Computer Technology',
+      location: 'Ethiopia',
+      period: 'February 2023 - June 2025',
+      description: 'Delivered enterprise DevOps for mobile banking platforms serving 1M+ users across 6 banks.',
       achievements: [
-        'Successfully migrated 20+ applications to AWS cloud with zero downtime',
-        'Implemented Infrastructure as Code using Terraform, managing 500+ resources',
-        'Built automated backup and disaster recovery solutions for enterprise clients',
-        'Reduced operational costs by implementing auto-scaling and resource optimization'
+        'Containerized mobile banking with Docker and Kubernetes; 99.95% uptime with Nginx, ActiveMQ, WildFly, MySQL',
+        'Hybrid cloud with Proxmox and AWS; optimized costs by 35%',
+        'Centralized logging with ELK processing 10TB+ daily logs; real-time analytics and alerting',
+        'Built Jenkins CI/CD for Maven-based Java apps; reduced deployments from 4 hours to 15 minutes'
       ],
-      technologies: ['AWS', 'Terraform', 'Ansible', 'Jenkins', 'Docker']
+      technologies: ['Docker', 'Kubernetes', 'Nginx', 'ActiveMQ', 'WildFly', 'MySQL', 'Proxmox', 'AWS', 'ELK', 'Jenkins']
     },
     {
-      title: 'System Administrator',
-      company: 'Enterprise Corp',
-      location: 'New York, NY',
-      period: '2018 - 2020',
-      description: 'Managed hybrid infrastructure environments and began automation initiatives that laid the foundation for DevOps transformation.',
+      title: 'Junior DevOps Engineer',
+      company: 'Atlas Computer Technology',
+      location: 'Ethiopia',
+      period: 'September 2021 - January 2023',
+      description: 'Supported on-prem cloud infrastructure and banking solutions in UAT and production.',
       achievements: [
-        'Maintained 100+ servers across multiple data centers with 99.5% uptime',
-        'Implemented configuration management with Ansible, reducing manual tasks by 60%',
-        'Established backup and monitoring procedures for critical business applications',
-        'Led security hardening initiatives and compliance audits'
+        'Managed Proxmox virtualization supporting 50+ VMs for banking applications',
+        'Deployed and tested USSD and mobile banking solutions in UAT with 100% functional compliance',
+        'Implemented security policies and monitoring with Zabbix, Grafana, and ELK',
+        'Collaborated with development teams to reduce production issues by 70% through robust testing'
       ],
-      technologies: ['Linux', 'VMware', 'Ansible', 'Nagios', 'Bash']
+      technologies: ['Proxmox', 'Zabbix', 'Grafana', 'ELK']
     }
   ]
 
@@ -99,14 +129,18 @@ const Experience = () => {
                         <Briefcase size={16} className="mr-2" />
                         {exp.company}
                       </div>
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <MapPin size={16} className="mr-2" />
-                        {exp.location}
-                      </div>
+                      {exp.location && (
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <MapPin size={16} className="mr-2" />
+                          {exp.location}
+                        </div>
+                      )}
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
+                    {exp.description && (
+                      <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
+                    )}
 
                     {/* Achievements */}
                     <div className="mb-4">
@@ -122,22 +156,24 @@ const Experience = () => {
                     </div>
 
                     {/* Technologies */}
-                    <div>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                    {exp.technologies && exp.technologies.length > 0 && (
+                      <div>
+                        <div className="flex flex-wrap gap-2">
+                          {exp.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div)
+            )}
           </div>
         </div>
       </div>
