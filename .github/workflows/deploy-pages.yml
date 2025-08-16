@@ -30,8 +30,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Derive VITE_BASE from repo
+        id: derive
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          if [[ "$REPO_NAME" == *.github.io ]]; then
+            echo "VITE_BASE=/" >> $GITHUB_ENV
+          else
+            echo "VITE_BASE=/$REPO_NAME/" >> $GITHUB_ENV
+          fi
+
       - name: Build
+        env:
+          VITE_BASE: ${{ env.VITE_BASE }}
+          VITE_API_BASE: ${{ vars.VITE_API_BASE }}
         run: npm run build
+
+      - name: Add .nojekyll and SPA fallback
+        run: |
+          touch dist/.nojekyll
+          cp dist/index.html dist/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

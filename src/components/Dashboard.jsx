@@ -11,12 +11,14 @@ const Dashboard = () => {
   const [summary, setSummary] = useState(null)
   const [events, setEvents] = useState([])
 
+  const apiBase = import.meta.env.VITE_API_BASE || ''
+
   useEffect(() => {
     async function load() {
       try {
         const [s, e] = await Promise.all([
-          fetch('/api/analytics/summary?days=14').then(r => r.json()),
-          fetch('/api/analytics/events?limit=50').then(r => r.json())
+          fetch(`${apiBase}/api/analytics/summary?days=14`).then(r => r.json()),
+          fetch(`${apiBase}/api/analytics/events?limit=50`).then(r => r.json())
         ])
         if (s.ok) setSummary(s.summary)
         if (e.ok) setEvents(e.events)
