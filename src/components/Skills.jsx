@@ -117,34 +117,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Certifications Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Certifications</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <div className="text-primary-600 text-2xl mb-2">☁️</div>
-              <h4 className="font-semibold text-gray-900">AWS Solutions Architect</h4>
-              <p className="text-gray-600 text-sm">Associate Level</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <div className="text-primary-600 text-2xl mb-2">⚙️</div>
-              <h4 className="font-semibold text-gray-900">Kubernetes Administrator</h4>
-              <p className="text-gray-600 text-sm">CKA Certified</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <div className="text-primary-600 text-2xl mb-2">🔧</div>
-              <h4 className="font-semibold text-gray-900">Terraform Associate</h4>
-              <p className="text-gray-600 text-sm">HashiCorp Certified</p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

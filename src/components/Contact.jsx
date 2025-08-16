@@ -17,24 +17,35 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      const json = await res.json()
+      if (!res.ok || !json.ok) throw new Error('Failed to send')
+      alert(json.sent ? 'Message sent via email ✅' : 'Message stored locally ✅')
+      setFormData({ name: '', email: '', subject: '', message: '' })
+    } catch (err) {
+      alert('Sorry, something went wrong. Please try again later.')
+    }
   }
 
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email',
-      value: 'teddy.abera@example.com',
-      link: 'mailto:teddy.abera@example.com'
+      value: 'tedionabera@gmail.com',
+      link: 'mailto:tedionabera@gmail.com'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+251 910 161 555',
+      link: 'tel:+251910161555'
     },
     {
       icon: MapPin,

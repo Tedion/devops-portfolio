@@ -18,20 +18,31 @@ const Experience = () => {
       ],
       technologies: ['Terraform', 'CI/CD', 'Cloud', 'Automation']
     },
-    {
-      title: 'OpenG2P Platform DevOps Engineer',
-      company: 'Atlas Computer Technology - Government Digital Transformation Project',
-      location: 'Ethiopia · Government',
-      period: 'August 2025 - Present',
-      description: "Leading DevOps implementation for Ethiopia's national OpenG2P platform for the Ministry of Women & Social Affairs.",
-      achievements: [
-        'Architected dual-infrastructure: Ethio Telecom cloud (7 VMs) and MOWSA on-premise (6 VMs), 85% completion',
-        'Deployed enterprise Kubernetes clusters using RKE2 with Rancher, Istio service mesh, and Keycloak SSO',
-        'Configured HA infrastructure with Hardware RAID 1+0, XCP-ng hypervisor, and WireGuard VPN',
-        'Implementing beneficiary data migration from ODK to OpenG2P for social protection programs'
-      ],
-      technologies: ['RKE2', 'Rancher', 'Istio', 'Keycloak', 'XCP-ng', 'WireGuard']
-    },
+          {
+        title: 'OpenG2P Platform DevOps Engineer',
+        company: 'Government Digital Transformation Project',
+        location: 'Ethiopia · Government',
+        period: 'July 2025 - Present',
+        description: `Leading DevOps implementation for Ethiopian Agricultural Transformation Institute (ATI), the Ministry of Women and Social Affairs (MoWSA), and the Ethiopian Disaster Risk Management Commission (EDRMC), aimed at leveraging digital solutions to transform lives across the country.
+
+Through these partnerships, OpenG2P is supporting G2P systems as part of Ethiopia's Fayda ID–enabled digital transformation journey.
+
+ATI × OpenG2P
+Implementing a robust, interoperable farmer profile and a comprehensive database of uniquely identified smallholder farmers and farm information. The farmer registry will enable effective digital agriculture services by multiple stakeholders and will be introduced as an open-source platform, allowing private and public entities to collaborate and offer services with farmers' consent.
+
+MoWSA × OpenG2P
+Implementing a feature-rich, robust social registry; efficient benefits management and delivery system; enabling secure data exchange between MoWSA and other departments; and facilitating digital cash transfers—supporting national objectives of poverty alleviation, transparent and equitable access, and sustainable livelihoods.
+
+EDRMC × OpenG2P
+Implementing an efficient Program and Beneficiary Management System to enable better data collection and management, deliver benefits, and monitor performance for disaster response (e.g., droughts, floods), including support for internally displaced persons (IDPs).`,
+        achievements: [
+          'Architected dual-infrastructure across Ethio Telecom cloud and MoWSA on-premises; ATI tele-cloud and on-premises; and EDRMC tele-cloud',
+          'Deployed enterprise Kubernetes clusters using RKE2 with Rancher, Istio service mesh, and Keycloak SSO',
+          'Configured HA infrastructure with Hardware RAID 1+0, XCP-ng hypervisor, and WireGuard VPN',
+          'Implementing beneficiary data migration from ODK to OpenG2P for social protection programs'
+        ],
+        technologies: ['RKE2', 'Rancher', 'Istio', 'Keycloak', 'XCP-ng', 'WireGuard']
+      },
     {
       title: 'Senior DevOps Engineer (Cloud & Platform Team)',
       company: 'Exponent.ch - Remote Contract',

@@ -22,7 +22,7 @@ const About = () => {
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            DevOps Engineer with a passion for automation and cloud technologies
+            DevOps Engineer with a passion for automation and cloud technologies — open to remote opportunities
           </p>
         </motion.div>
 
@@ -35,22 +35,23 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I am a dedicated DevOps Engineer with extensive experience in designing and implementing 
-              robust CI/CD pipelines, managing cloud infrastructure, and optimizing deployment processes. 
-              My expertise spans across multiple cloud platforms, containerization technologies, and 
-              infrastructure as code tools.
+              DevOps/SRE engineer specializing in Kubernetes platforms, secure networking, and high-availability
+              systems across government, banking, and platform engineering. I\'ve delivered 99.95% uptime for
+              mobile banking, cut deployment times from 4 hours to 15 minutes with CI/CD, and reduced infra costs
+              by ~35% through hybrid cloud optimization.
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              I believe in the power of automation to transform software delivery, reduce manual errors, 
-              and enable teams to focus on innovation. My approach combines technical excellence with 
-              collaborative teamwork to deliver reliable, scalable solutions that drive business success.
+              My toolkit includes RKE2 with Rancher, Istio mTLS/service policies, Keycloak SSO, Jenkins/GitHub Actions,
+              Terraform/Terragrunt, Prometheus/Grafana/ELK, Proxmox/XCP-ng, and WireGuard. I build enterprise-grade
+              Kubernetes clusters, standardize Helm-based deployments, and implement robust observability and incident
+              response practices.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              When I'm not optimizing infrastructure or debugging deployment pipelines, you can find me 
-              exploring new technologies, contributing to open-source projects, or sharing knowledge 
-              with the DevOps community.
+              Currently leading Ethiopia\'s OpenG2P initiatives with ATI, MoWSA, and EDRMC—standing up secure, scalable
+              platforms for farmer registries, social registries, and benefits delivery; planning ODK → OpenG2P data
+              migration with validation and auditability. Open to remote opportunities.
             </p>
           </motion.div>
 
