@@ -8,7 +8,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 tech-background pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -148,6 +148,25 @@ const Hero = () => {
               >
                 <div className="text-2xl">⚙️</div>
               </motion.div>
+
+              {/* Tech icons collage */}
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
+                  CI/CD Pipeline
+                </div>
+                <div className="absolute top-10 -left-10 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
+                  Docker
+                </div>
+                <div className="absolute top-20 -right-12 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
+                  Kubernetes
+                </div>
+                <div className="absolute bottom-12 left-1/3 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
+                  Cloud
+                </div>
+                <div className="absolute bottom-0 right-0 bg-white/90 rounded-xl shadow p-2 text-xs font-semibold text-gray-700">
+                  Observability
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
