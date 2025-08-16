@@ -49,7 +49,7 @@ The repository is already initialized. To push your current branch:
 
 ```bash
 git add -A
-git commit -m "chore: add .env.example and docs for SMTP + deployment"
+git commit -m "chore: workflows for pages and server"
 git push -u origin HEAD
 ```
 
@@ -59,6 +59,26 @@ If you need to set a new remote:
 git remote add origin https://github.com/<your-username>/<your-repo>.git
 git push -u origin main
 ```
+
+## GitHub Actions Workflows
+
+- `.github/workflows/deploy-pages.yml`: Builds the Vite app and deploys `dist/` to GitHub Pages on pushes to `main` or manual dispatch.
+- `.github/workflows/build-and-push-server.yml`: Builds `server/Dockerfile` and pushes the image to GitHub Container Registry as `ghcr.io/<owner>/devops-portfolio-server`.
+
+### Configure Pages
+1. Push to `main` and wait for the workflow.
+2. In GitHub repo Settings → Pages → set Source to "GitHub Actions".
+
+### Configure Gmail SMTP secrets (for server hosting)
+If you deploy the backend somewhere (Render/Railway/Fly/Heroku), set these environment variables on that platform:
+- `SMTP_HOST=smtp.gmail.com`
+- `SMTP_PORT=587`
+- `SMTP_USER=tedionabera@gmail.com`
+- `SMTP_PASS=<your-app-password>`
+- `FROM_EMAIL=tedionabera@gmail.com`
+- `TO_EMAIL=tedionabera@gmail.com`
+
+Gmail requires 2FA and an App Password.
 
 ## SMTP configuration
 
