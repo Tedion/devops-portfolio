@@ -118,11 +118,11 @@ const Hero = () => {
               {/* Profile Image Placeholder */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
                 <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                  <img
-                    src="https://api.dicebear.com/7.x/avataaars/svg?top=ShortHairShortWaved&hairColor=Black&skinColor=Black&facialHair=MoustacheFancy&accessories=Prescription02&clothe=Hoodie&clotheColor=Blue03"
-                    alt="Anime engineer building Kubernetes infrastructure"
-                    className="w-48 h-48 drop-shadow-md"
-                  />
+                                     <img
+                     src="https://api.dicebear.com/7.x/adventurer/svg?seed=DevOpsEngineer&hairColor=black&accessoriesProbability=50"
+                     alt="Engineer avatar with DevOps tools (Kubernetes, Docker, Cloud)"
+                     className="w-48 h-48 drop-shadow-md"
+                   />
                 </div>
               </div>
               
