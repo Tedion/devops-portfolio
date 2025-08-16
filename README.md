@@ -8,7 +8,7 @@ Run locally:
 npm install
 ```
 
-2. (Optional) Configure SMTP for email delivery. Copy `.env.example` to `.env` and fill values.
+2. (Optional) Configure SMTP and analytics flags. Copy `.env.example` to `.env` and fill values.
 
 3. Start frontend + backend together
 

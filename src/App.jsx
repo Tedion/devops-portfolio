@@ -20,7 +20,7 @@ function App() {
         <Projects />
         <Experience />
         <Contact />
-        <Dashboard />
+        {import.meta.env.VITE_SHOW_ANALYTICS_DASHBOARD === 'true' && <Dashboard />}
       </main>
       <Footer />
     </div>

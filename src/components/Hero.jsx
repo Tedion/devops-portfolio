@@ -57,14 +57,19 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="btn-primary inline-flex items-center gap-2">
+              <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="btn-primary inline-flex items-center gap-2">
                 <Mail size={20} />
                 Get In Touch
               </button>
-              <button className="btn-secondary inline-flex items-center gap-2">
+              <a
+                href="https://docs.google.com/document/d/1LCKshjc6qhh0v4ZMrlcLvtqtSM_Vq9kw/export?format=pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary inline-flex items-center gap-2"
+              >
                 <Download size={20} />
                 Download CV
-              </button>
+              </a>
             </motion.div>
 
             <motion.div

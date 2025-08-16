@@ -96,10 +96,10 @@ const Footer = () => {
             <div className="space-y-2 text-gray-400">
               <p>
                 <a 
-                  href="mailto:teddy.abera@example.com"
+                  href="mailto:tedionabera@gmail.com"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  teddy.abera@example.com
+                  tedionabera@gmail.com
                 </a>
               </p>
               <p>Available for Remote Work</p>

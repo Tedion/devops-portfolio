@@ -9,9 +9,6 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script type="module">
-      import { initAnalytics } from '/src/analytics.js'
-      initAnalytics()
-    </script>
+    <!-- Analytics init moved to src/main.jsx and gated by VITE_ENABLE_ANALYTICS -->
   </body>
 </html> 
