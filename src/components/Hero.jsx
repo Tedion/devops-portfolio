@@ -99,7 +99,7 @@ const Hero = () => {
                 <Linkedin size={24} />
               </a>
               <a 
-                href="mailto:teddy.abera@example.com"
+                href="mailto:tedionabera@gmail.com"
                 className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
               >
                 <Mail size={24} />
@@ -118,9 +118,11 @@ const Hero = () => {
               {/* Profile Image Placeholder */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
                 <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                  <div className="text-8xl lg:text-9xl text-white/80">
-                    👨‍💻
-                  </div>
+                  <img
+                    src="https://api.dicebear.com/7.x/avataaars/svg?top=ShortHairShortWaved&hairColor=Black&skinColor=Black&facialHair=MoustacheFancy&accessories=Prescription02&clothe=Hoodie&clotheColor=Blue03"
+                    alt="Anime engineer building Kubernetes infrastructure"
+                    className="w-48 h-48 drop-shadow-md"
+                  />
                 </div>
               </div>
               
