@@ -4,6 +4,7 @@ import cors from 'cors'
 import nodemailer from 'nodemailer'
 import { z } from 'zod'
 import fs from 'fs/promises'
+import { appendEvent, getEvents, getSummary } from './analytics.js'
 
 const app = express()
 app.use(cors())
@@ -57,6 +58,52 @@ app.post('/api/contact', async (req, res) => {
 	} catch (err) {
 		console.error('Contact handler error:', err)
 		return res.status(500).json({ ok: false, error: 'Internal error' })
+	}
+})
+
+// Analytics ingestion
+app.post('/api/events', async (req, res) => {
+	try {
+		const { name, path, referrer, meta = {}, visitorId } = req.body || {}
+		if (!name) return res.status(400).json({ ok: false, error: 'Missing event name' })
+		const event = {
+			name,
+			path: path || null,
+			referrer: referrer || null,
+			meta,
+			visitorId: visitorId || null,
+			ua: req.headers['user-agent'] || null,
+			ip: req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress,
+			timestamp: new Date().toISOString()
+		}
+		await appendEvent(event)
+		return res.json({ ok: true })
+	} catch (e) {
+		console.error('Event ingestion error', e)
+		return res.status(500).json({ ok: false })
+	}
+})
+
+// Analytics queries
+app.get('/api/analytics/summary', async (req, res) => {
+	try {
+		const days = Number(req.query.days || 7)
+		const summary = await getSummary(days)
+		return res.json({ ok: true, summary })
+	} catch (e) {
+		console.error('Summary error', e)
+		return res.status(500).json({ ok: false })
+	}
+})
+
+app.get('/api/analytics/events', async (req, res) => {
+	try {
+		const limit = Number(req.query.limit || 100)
+		const events = await getEvents(limit)
+		return res.json({ ok: true, events })
+	} catch (e) {
+		console.error('Events fetch error', e)
+		return res.status(500).json({ ok: false })
 	}
 })
 
