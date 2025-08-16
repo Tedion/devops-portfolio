@@ -1,14 +1,17 @@
 export function initAnalytics() {
   const visitorId = getVisitorId()
 
+  const apiBase = import.meta.env.VITE_API_BASE || ''
+  const eventsUrl = `${apiBase}/api/events`.replace(/\/+api\//, '/api/')
+
   function send(event) {
     try {
       navigator.sendBeacon(
-        '/api/events',
+        eventsUrl,
         new Blob([JSON.stringify(event)], { type: 'application/json' })
       )
     } catch {
-      fetch('/api/events', {
+      fetch(eventsUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(event)
