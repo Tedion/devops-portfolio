@@ -21,6 +21,70 @@ const Projects = () => {
       image: '🏛️'
     },
     {
+      title: 'Enterprise SMS Gateway Backend',
+      description: 'Scalable backend integrating with SMS Gateway for Android. Supports multi-device, multi-location, multi-SIM, and secure real-time webhooks with n8n.',
+      icon: Cloud,
+      technologies: ['Node.js', 'Express', 'MySQL', 'Axios', 'n8n', 'HMAC', 'Android Gateway', 'Docker'],
+      features: [
+        'Multi-device with sticky routing and auto-registration',
+        'Multi-location and multi-SIM support with rotation policies',
+        'Real-time webhooks to n8n with HMAC-SHA256 verification',
+        'Full message lifecycle tracking and reply context preservation',
+        'Secure API tokens and rate-limiting'
+      ],
+      github: '#',
+      demo: '#',
+      image: '📡'
+    },
+    {
+      title: 'Estate Scraper – Production Setup (Hostinger-Ready)',
+      description: 'Hardened end-to-end stack for estate scraping with API + Worker + Redis, proxy-ready crawlers, and n8n integration. One-click scripts for VPS setup.',
+      icon: BarChart3,
+      technologies: ['Express', 'Zod', 'Redis', 'Docker Compose', 'Crawlee', 'Puppeteer-stealth', 'PostgreSQL', 'n8n'],
+      features: [
+        'API with validation, CORS, rate limiting and job/auth tokens',
+        'Worker with proxy support and bandwidth-friendly blocking',
+        'Graceful shutdown of Redis/DB; health and queue status endpoints',
+        'DB schema + migrations for listings and snapshots',
+        'Hostinger scripts for setup, migration and end-to-end tests'
+      ],
+      github: '#',
+      demo: '#',
+      image: '🏠'
+    },
+    {
+      title: 'USSD & Mobile Banking Platforms (Multi-Bank)',
+      description: 'Delivered high-availability mobile banking for Siinqee, Hijra, Wegagen and others with secure messaging, SSO, CI/CD, and observability.',
+      icon: Container,
+      technologies: ['Docker', 'Kubernetes', 'Nginx', 'ActiveMQ', 'WildFly', 'MySQL', 'Keycloak', 'Jenkins', 'ELK', 'Zabbix', 'Grafana'],
+      features: [
+        'Reverse proxy/load balancing and secure messaging (ActiveMQ)',
+        'HA deployments with autoscaling and failover',
+        'Jenkins pipelines for Maven apps; minutes-not-hours releases',
+        'Centralized logging + dashboards (ELK, Zabbix, Grafana)',
+        'SSO via Keycloak and heartbeat-based HA'
+      ],
+      github: '#',
+      demo: '#',
+      image: '🏦'
+    },
+    {
+      title: 'Ethiopia Tax Payment Portal (MoR)',
+      description: 'Clustered tax payment platform with Kubernetes, GitLab CI, Vault secrets, and robust logging/monitoring for production operations.',
+      icon: Shield,
+      technologies: ['Kubernetes', 'Ansible', 'GitLab CI', 'HashiCorp Vault', 'PostgreSQL', 'Keycloak', 'ELK', 'Superset', 'Jasper'],
+      features: [
+        'K8s orchestration with Ansible-driven configuration',
+        'Protected job submission and admin queue inspect endpoints',
+        'Vault-managed secrets and secure SSO (Keycloak)',
+        'ELK-based log analytics and business reporting (Superset/Jasper)',
+        'End-to-end health checks and resilience policies'
+      ],
+      github: '#',
+      demo: '#',
+      image: '🧾'
+    },
+    {
       title: 'Mobile Banking Platform Modernization',
       description: 'Containerized Java-based mobile banking workloads and introduced CI/CD and centralized logging for enterprise financial services.',
       icon: Container,
