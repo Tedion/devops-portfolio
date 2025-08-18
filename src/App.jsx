@@ -12,7 +12,7 @@ import Dashboard from './components/Dashboard'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-black text-white min-h-screen">
       <Header />
       <main>
         <Hero />

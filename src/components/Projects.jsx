@@ -89,7 +89,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -98,8 +98,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Work that reflects real impact across government, banking, and platform engineering
           </p>
         </motion.div>
@@ -115,18 +115,18 @@ const Projects = () => {
             <motion.div
               key={project.title}
               variants={cardVariants}
-              className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100"
+              className="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg overflow-hidden card-hover border border-gray-800"
             >
               {/* Project Header */}
-              <div className="p-6 border-b border-gray-100">
+              <div className="p-6 border-b border-gray-800">
                 <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">{project.image}</div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                     <div className="flex space-x-3">
                       <a
                         href={project.github}
-                        className="text-gray-600 hover:text-primary-600 transition-colors"
+                        className="text-gray-300 hover:text-primary-400 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -134,7 +134,7 @@ const Projects = () => {
                       </a>
                       <a
                         href={project.demo}
-                        className="text-gray-600 hover:text-primary-600 transition-colors"
+                        className="text-gray-300 hover:text-primary-400 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -143,17 +143,17 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed">{project.description}</p>
+                <p className="text-gray-300 leading-relaxed">{project.description}</p>
               </div>
 
               {/* Technologies */}
-              <div className="p-6 border-b border-gray-100">
-                <h4 className="font-semibold text-gray-900 mb-3">Technologies Used</h4>
+              <div className="p-6 border-b border-gray-800">
+                <h4 className="font-semibold text-white mb-3">Technologies Used</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm font-medium"
                     >
                       {tech}
                     </span>
@@ -163,12 +163,12 @@ const Projects = () => {
 
               {/* Key Features */}
               <div className="p-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Key Features</h4>
+                <h4 className="font-semibold text-white mb-3">Key Features</h4>
                 <ul className="space-y-2">
                   {project.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700 text-sm">{feature}</span>
+                      <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -185,7 +185,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-gray-300 mb-6">
             Want to see more projects or discuss a collaboration?
           </p>
           <a

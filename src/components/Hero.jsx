@@ -8,7 +8,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 tech-background pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -28,7 +28,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                className="text-5xl lg:text-6xl font-bold text-white leading-tight"
               >
                 Hi, I'm{' '}
                 <span className="gradient-text">Teddy Abera</span>
@@ -38,7 +38,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-2xl lg:text-3xl font-medium text-gray-700"
+                className="text-2xl lg:text-3xl font-medium text-gray-300"
               >
                 DevOps Engineer & Cloud Architect
               </motion.h2>
@@ -47,7 +47,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-lg text-gray-600 max-w-2xl leading-relaxed"
+                className="text-lg text-gray-300 max-w-2xl leading-relaxed"
               >
                 Passionate about automating infrastructure, optimizing CI/CD pipelines, 
                 and building scalable cloud solutions. I specialize in AWS, Kubernetes, 
@@ -86,7 +86,7 @@ const Hero = () => {
                 href="https://github.com/Tedion" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
+                className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
               >
                 <Github size={24} />
               </a>
@@ -94,13 +94,13 @@ const Hero = () => {
                 href="https://linkedin.com/in/teddy-abera" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
+                className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
               >
                 <Linkedin size={24} />
               </a>
               <a 
                 href="mailto:tedionabera@gmail.com"
-                className="text-gray-600 hover:text-primary-600 transition-colors duration-300"
+                className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
               >
                 <Mail size={24} />
               </a>
@@ -117,12 +117,13 @@ const Hero = () => {
             <div className="relative">
               {/* Profile Image Placeholder */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
-                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://api.dicebear.com/7.x/adventurer/svg?seed=DevOpsEngineer&hairColor=black&accessoriesProbability=50"
-                    alt="Engineer avatar with DevOps tools (Kubernetes, Docker, Cloud)"
-                    className="w-48 h-48 drop-shadow-md"
+                    src="/avatar.png"
+                    alt="Profile avatar"
+                    className="w-48 h-48 drop-shadow-md object-cover"
                     loading="lazy"
+                    onError={(e) => { e.currentTarget.src = 'https://avatars.githubusercontent.com/u/1020190?v=4' }}
                   />
                 </div>
               </div>
@@ -183,7 +184,7 @@ const Hero = () => {
         >
           <button
             onClick={scrollToAbout}
-            className="text-gray-600 hover:text-primary-600 transition-colors duration-300 animate-bounce"
+            className="text-gray-300 hover:text-primary-400 transition-colors duration-300 animate-bounce"
           >
             <ArrowDown size={24} />
           </button>
