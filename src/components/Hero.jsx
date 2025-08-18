@@ -7,6 +7,8 @@ const Hero = () => {
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })
   }
 
+  const avatarUrl = (import.meta.env.VITE_AVATAR_URL || '/avatar.png')
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -119,11 +121,11 @@ const Hero = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
                 <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                   <img
-                    src="/avatar.png"
+                    src={avatarUrl}
                     alt="Profile avatar"
                     className="w-48 h-48 drop-shadow-md object-cover"
                     loading="lazy"
-                    onError={(e) => { e.currentTarget.src = 'https://avatars.githubusercontent.com/u/1020190?v=4' }}
+                    onError={(e) => { e.currentTarget.src = 'https://api.dicebear.com/7.x/notionists/svg?seed=Tedion&skinColor=8d5524,5d4037,3d2b1f&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50' }}
                   />
                 </div>
               </div>
