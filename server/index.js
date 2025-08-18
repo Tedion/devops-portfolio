@@ -6,8 +6,45 @@ import { z } from 'zod'
 import fs from 'fs/promises'
 import { appendEvent, getEvents, getSummary } from './analytics.js'
 
+// Basic in-memory rate limiter
+function createRateLimiter({ windowMs, maxRequests, keyFn }) {
+  const requestCountsByKey = new Map()
+
+  return function rateLimitMiddleware(req, res, next) {
+    const now = Date.now()
+    const bucketKey = keyFn(req)
+    const bucket = requestCountsByKey.get(bucketKey) || { count: 0, resetAt: now + windowMs }
+
+    if (now > bucket.resetAt) {
+      bucket.count = 0
+      bucket.resetAt = now + windowMs
+    }
+
+    bucket.count += 1
+    requestCountsByKey.set(bucketKey, bucket)
+
+    if (bucket.count > maxRequests) {
+      return res.status(429).json({ ok: false, error: 'Too many requests, please try again later.' })
+    }
+
+    next()
+  }
+}
+
 const app = express()
-app.use(cors())
+
+// CORS: open in development, configurable in production
+const isProduction = process.env.NODE_ENV === 'production'
+const configuredOrigin = process.env.CORS_ORIGIN
+if (isProduction && configuredOrigin) {
+  app.use(
+    cors({
+      origin: configuredOrigin,
+    })
+  )
+} else {
+  app.use(cors())
+}
 app.use(express.json())
 
 const contactSchema = z.object({
@@ -17,7 +54,14 @@ const contactSchema = z.object({
 	message: z.string().min(10)
 })
 
-app.post('/api/contact', async (req, res) => {
+const rateLimitPerIpMinute = (maxRequests) =>
+  createRateLimiter({
+    windowMs: 60 * 1000,
+    maxRequests,
+    keyFn: (req) => req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress || 'unknown',
+  })
+
+app.post('/api/contact', rateLimitPerIpMinute(10), async (req, res) => {
 	const parsed = contactSchema.safeParse(req.body)
 	if (!parsed.success) {
 		return res.status(400).json({ ok: false, errors: parsed.error.flatten() })
@@ -62,7 +106,7 @@ app.post('/api/contact', async (req, res) => {
 })
 
 // Analytics ingestion
-app.post('/api/events', async (req, res) => {
+app.post('/api/events', rateLimitPerIpMinute(120), async (req, res) => {
 	try {
 		const { name, path, referrer, meta = {}, visitorId } = req.body || {}
 		if (!name) return res.status(400).json({ ok: false, error: 'Missing event name' })

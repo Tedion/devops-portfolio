@@ -10,6 +10,9 @@ const Contact = () => {
     message: ''
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState({ type: null, message: '' })
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,6 +22,13 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!formData.name || !formData.email || !formData.subject || formData.message.trim().length < 10) {
+      setStatus({ type: 'error', message: 'Please fill all fields. Message must be at least 10 characters.' })
+      return
+    }
+
+    setIsSubmitting(true)
+    setStatus({ type: null, message: '' })
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -27,10 +37,12 @@ const Contact = () => {
       })
       const json = await res.json()
       if (!res.ok || !json.ok) throw new Error('Failed to send')
-      alert(json.sent ? 'Message sent via email ✅' : 'Message stored locally ✅')
+      setStatus({ type: 'success', message: json.sent ? 'Message sent via email ✅' : 'Message stored locally ✅' })
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (err) {
-      alert('Sorry, something went wrong. Please try again later.')
+      setStatus({ type: 'error', message: 'Sorry, something went wrong. Please try again later.' })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -175,6 +187,13 @@ const Contact = () => {
             className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+            {status.type && (
+              <div className={`mb-4 rounded-lg p-3 text-sm ${
+                status.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'
+              }`}>
+                {status.message}
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -243,10 +262,11 @@ const Contact = () => {
               
               <button
                 type="submit"
-                className="w-full btn-primary inline-flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className={`w-full btn-primary inline-flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 <Send size={20} />
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </motion.div>

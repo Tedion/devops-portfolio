@@ -41,6 +41,8 @@ Notes
 - Without SMTP env vars, messages are saved as JSON files under `server/_inbox/`.
 - Update contact info in `src/components/Contact.jsx` and `src/components/Footer.jsx`.
 
+- In production, set `CORS_ORIGIN` in `.env` to your site origin to restrict API access.
+
 ---
 
 ## Deployment to GitHub
