@@ -46,7 +46,7 @@ const certifications = [
 
 function Certifications() {
 	return (
-		<section id="certifications" className="py-20 bg-white">
+		<section id="certifications" className="py-20 bg-black">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					initial={{ opacity: 0, y: 50 }}
@@ -55,29 +55,29 @@ function Certifications() {
 					viewport={{ once: true }}
 					className="text-center mb-12"
 				>
-					<h2 className="text-4xl font-bold text-gray-900 mb-4">Certifications</h2>
-					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+					<h2 className="text-4xl font-bold text-white mb-4">Certifications</h2>
+					<p className="text-xl text-gray-300 max-w-3xl mx-auto">
 						Selected credentials and focus areas
 					</p>
 				</motion.div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{certifications.map((c) => (
-						<div key={c.title + c.issued} className="bg-white rounded-lg p-6 shadow-md border border-gray-100 text-left">
-							<div className="text-primary-600 text-sm font-semibold mb-1">{c.issuer}</div>
-							<h3 className="font-semibold text-gray-900">{c.title}</h3>
-							<div className="text-gray-600 text-sm mt-1">
+						<div key={c.title + c.issued} className="bg-gray-900 rounded-lg p-6 shadow-md border border-gray-800 text-left">
+							<div className="text-primary-400 text-sm font-semibold mb-1">{c.issuer}</div>
+							<h3 className="font-semibold text-white">{c.title}</h3>
+							<div className="text-gray-300 text-sm mt-1">
 								Issued {c.issued}{c.expires ? ` · Expires ${c.expires}` : ''}
 							</div>
 							{c.credentialId && (
-								<div className="text-xs text-gray-500 mt-2 break-all">
+								<div className="text-xs text-gray-400 mt-2 break-all">
 									Credential ID: {c.credentialId}
 								</div>
 							)}
 							{c.skills && c.skills.length > 0 && (
 								<div className="flex flex-wrap gap-2 mt-4">
 									{c.skills.map((s) => (
-										<span key={s} className="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs font-medium">{s}</span>
+										<span key={s} className="px-2 py-0.5 bg-gray-800 text-gray-200 rounded text-xs font-medium">{s}</span>
 									))}
 								</div>
 							)}

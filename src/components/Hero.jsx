@@ -123,7 +123,7 @@ const Hero = () => {
                     alt="Profile avatar"
                     className="w-48 h-48 drop-shadow-md object-cover"
                     loading="lazy"
-                    onError={(e) => { e.currentTarget.src = 'https://avatars.githubusercontent.com/u/1020190?v=4' }}
+                    onError={(e) => { e.currentTarget.src = 'https://avatars.githubusercontent.com/u/3437690?v=4' }}
                   />
                 </div>
               </div>
