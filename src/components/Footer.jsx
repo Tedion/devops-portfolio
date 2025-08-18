@@ -17,8 +17,8 @@ const Footer = () => {
     },
     {
       icon: Twitter,
-      url: 'https://twitter.com/teddy_abera',
-      label: 'Twitter'
+      url: 'https://x.com/DTedion',
+      label: 'X (Twitter)'
     }
   ]
 

@@ -83,8 +83,8 @@ const Contact = () => {
     },
     {
       icon: Twitter,
-      name: 'Twitter',
-      url: 'https://twitter.com/teddy_abera',
+      name: 'X',
+      url: 'https://x.com/DTedion',
       color: 'hover:text-blue-400'
     }
   ]
