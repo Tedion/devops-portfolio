@@ -90,7 +90,7 @@ Implementing an efficient Program and Beneficiary Management System to enable be
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-gray-900 to-black">
+    <section id="experience" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
