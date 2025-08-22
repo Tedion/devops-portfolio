@@ -22,6 +22,18 @@ export default {
           800: '#1e40af',
           900: '#1e3a8a',
         },
+        olive: {
+          50: '#fafaf3',
+          100: '#f3f5e6',
+          200: '#e5ebc7',
+          300: '#d2dd9e',
+          400: '#b3c86e',
+          500: '#8aa23f',
+          600: '#718835',
+          700: '#5a6c2c',
+          800: '#465423',
+          900: '#38441d',
+        },
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

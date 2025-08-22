@@ -99,7 +99,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-olive-400 mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Let's discuss your DevOps challenges and explore how we can work together
           </p>
@@ -115,7 +115,7 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-olive-400 mb-6">Contact Information</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.div
@@ -130,7 +130,7 @@ const Contact = () => {
                       <info.icon className="text-primary-400" size={24} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">{info.title}</h4>
+                      <h4 className="font-semibold text-olive-400">{info.title}</h4>
                       {info.link ? (
                         <a
                           href={info.link}
@@ -149,7 +149,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h3 className="text-xl font-bold text-white mb-4">Follow Me</h3>
+              <h3 className="text-xl font-bold text-olive-400 mb-4">Follow Me</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
@@ -167,7 +167,7 @@ const Contact = () => {
 
             {/* Quick Info */}
             <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-6 border border-gray-800">
-              <h3 className="text-lg font-bold text-white mb-3">Quick Response</h3>
+              <h3 className="text-lg font-bold text-olive-400 mb-3">Quick Response</h3>
               <p className="text-gray-300 mb-4">
                 I typically respond to messages within 24 hours. For urgent matters, 
                 feel free to reach out via phone or LinkedIn.
@@ -187,7 +187,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-lg p-8 border border-gray-800"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-olive-400 mb-6">Send a Message</h3>
             {status.type && (
               <div className={`mb-4 rounded-lg p-3 text-sm ${
                 status.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'

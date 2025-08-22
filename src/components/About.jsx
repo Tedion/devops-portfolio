@@ -20,7 +20,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-olive-400 mb-4">About Me</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             DevOps Engineer with a passion for automation and cloud technologies — open to remote opportunities
           </p>
@@ -28,7 +28,7 @@ const About = () => {
 
         <div className="max-w-5xl mx-auto mb-12">
           <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-            <h3 className="text-2xl font-bold text-white mb-4">Professional Summary</h3>
+            <h3 className="text-2xl font-bold text-olive-400 mb-4">Professional Summary</h3>
             <p className="text-gray-300 leading-relaxed">
               Mid-level DevOps Engineer with a strong foundation in building, automating, and securing scalable infrastructures across cloud and on-premise platforms. Experienced in containerization and orchestration with Docker and Kubernetes (RKE2); infrastructure automation with Terraform, Terragrunt, and Ansible; CI/CD pipelines using Jenkins and GitLab; network architecture and secure access with Nginx, Apache, HAProxy, and Keycloak; and monitoring/logging with Zabbix, Prometheus, Grafana, and the ELK stack. Committed to delivering robust solutions that enhance performance, security, and deployment agility in dynamic environments.
             </p>
@@ -83,7 +83,7 @@ const About = () => {
                 <div className="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-primary-400" size={24} />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-3xl font-bold text-olive-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>
               </motion.div>
             ))}
