@@ -162,7 +162,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-olive-400 mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Work that reflects real impact across government, banking, and platform engineering
           </p>
@@ -186,7 +186,7 @@ const Projects = () => {
                 <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">{project.image}</div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-olive-400 mb-2">{project.title}</h3>
                     <div className="flex space-x-3">
                       <a
                         href={project.github}
