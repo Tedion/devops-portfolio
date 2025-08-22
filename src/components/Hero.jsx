@@ -30,7 +30,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-5xl lg:text-6xl font-bold text-olive-400 leading-tight"
+                className="text-5xl lg:text-6xl font-extrabold text-olive-700 leading-tight"
               >
                 Hi, I'm{' '}
                 <span className="gradient-text">Teddy Abera</span>
