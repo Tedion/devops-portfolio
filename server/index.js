@@ -77,22 +77,28 @@ app.post('/api/contact', rateLimitPerIpMinute(10), async (req, res) => {
 	const fromEmail = process.env.FROM_EMAIL || smtpUser
 
 	try {
-		if (smtpHost && smtpUser && smtpPass && toEmail) {
-			const transporter = nodemailer.createTransport({
-				host: smtpHost,
-				port: smtpPort,
-				secure: smtpPort === 465,
-				auth: { user: smtpUser, pass: smtpPass }
-			})
+		const shouldAttemptSmtp = smtpHost && smtpUser && smtpPass && toEmail
+		if (shouldAttemptSmtp) {
+			try {
+				const transporter = nodemailer.createTransport({
+					host: smtpHost,
+					port: smtpPort,
+					secure: smtpPort === 465,
+					auth: { user: smtpUser, pass: smtpPass }
+				})
 
-			await transporter.sendMail({
-				from: `Portfolio Contact <${fromEmail}>`,
-				to: toEmail,
-				subject: `[Portfolio] ${subject}`,
-				text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
-				html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p>${message.replace(/\n/g, '<br/>')}</p>`
-			})
-			return res.json({ ok: true, sent: true })
+				await transporter.sendMail({
+					from: `Portfolio Contact <${fromEmail}>`,
+					to: toEmail,
+					subject: `[Portfolio] ${subject}`,
+					text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+					html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p>${message.replace(/\n/g, '<br/>')}</p>`
+				})
+				return res.json({ ok: true, sent: true })
+			} catch (e) {
+				console.error('SMTP send failed:', e)
+				// Fall back to storing locally
+			}
 		}
 
 		await fs.mkdir('server/_inbox', { recursive: true })
