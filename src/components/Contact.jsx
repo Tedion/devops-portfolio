@@ -30,7 +30,18 @@ const Contact = () => {
     setIsSubmitting(true)
     setStatus({ type: null, message: '' })
     try {
-      const API_BASE = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '') || '/api'
+      const apiBaseRaw = (import.meta.env.VITE_API_BASE || '').trim()
+      const API_BASE = apiBaseRaw ? apiBaseRaw.replace(/\/$/, '') : null
+
+      if (!API_BASE) {
+        const mailtoSubject = encodeURIComponent(`[Portfolio] ${formData.subject} (from ${formData.name})`)
+        const mailtoBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)
+        window.location.href = `mailto:tedionabera@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
+        setStatus({ type: 'success', message: 'Opening your email client…' })
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        return
+      }
+
       const res = await fetch(`${API_BASE}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
