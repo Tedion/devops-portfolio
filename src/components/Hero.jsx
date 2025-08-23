@@ -7,9 +7,8 @@ const Hero = () => {
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })
   }
 
-  const localAvatar = '/devops-avatar.svg'
   const defaultAvatar = 'https://api.dicebear.com/7.x/adventurer/svg?seed=DevOpsPro&hair=short10&beard=medium&accessories=glasses&accessoriesProbability=100&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50'
-  const avatarUrl = import.meta.env.VITE_AVATAR_URL || localAvatar
+  const avatarUrl = 'https://share.google/images/pxBW4j8LSyMEPFYI4'
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20">
