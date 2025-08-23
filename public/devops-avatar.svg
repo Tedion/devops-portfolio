@@ -7,13 +7,13 @@
   role="img"
   aria-labelledby="title desc"
 >
-  <title id="title">Professional DevOps Avatar</title>
-  <desc id="desc">Stylized bust of a professional DevOps engineer with glasses in front of a blue gradient circle, with subtle DevOps-themed icons.</desc>
+  <title id="title">Developer avatar with laptop and Linux sticker</title>
+  <desc id="desc">A friendly developer character holding a laptop with a Linux Tux sticker, inside a soft gradient circle.</desc>
 
   <defs>
     <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#2563eb"/>
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#6366f1"/>
     </linearGradient>
 
     <radialGradient id="spotlight" cx="35%" cy="30%" r="70%">
@@ -29,27 +29,22 @@
       <circle cx="128" cy="128" r="116"/>
     </clipPath>
 
-    <!-- Simple gear shape for DevOps motif -->
-    <g id="icon-gear">
-      <circle cx="0" cy="0" r="9" fill="#0ea5e9"/>
-      <circle cx="0" cy="0" r="4.2" fill="#e2f3ff"/>
-      <g fill="#0ea5e9">
-        <rect x="-1.6" y="-13" width="3.2" height="6" rx="1.2"/>
-        <rect x="-1.6" y="7" width="3.2" height="6" rx="1.2"/>
-        <rect x="7" y="-1.6" width="6" height="3.2" rx="1.2"/>
-        <rect x="-13" y="-1.6" width="6" height="3.2" rx="1.2"/>
-        <rect x="6.0" y="6.0" width="3.2" height="6" rx="1.2" transform="rotate(45 7.6 9)"/>
-        <rect x="-9.2" y="-12.2" width="3.2" height="6" rx="1.2" transform="rotate(45 -7.6 -9)"/>
-        <rect x="6.0" y="-12.2" width="3.2" height="6" rx="1.2" transform="rotate(-45 7.6 -9)"/>
-        <rect x="-9.2" y="6.0" width="3.2" height="6" rx="1.2" transform="rotate(-45 -7.6 9)"/>
-      </g>
-    </g>
-
-    <!-- Simple terminal icon for DevOps motif -->
-    <g id="icon-terminal">
-      <rect x="-14" y="-10" width="28" height="20" rx="3" fill="#0ea5e9"/>
-      <polyline points="-9,-3 -4,0 -9,3" fill="none" stroke="#e2f3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <line x1="-1" y1="3" x2="7" y2="3" stroke="#e2f3ff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Simple Tux sticker group -->
+    <g id="tux-sticker">
+      <!-- belly -->
+      <ellipse cx="0" cy="6" rx="9" ry="10" fill="#ffffff"/>
+      <!-- body -->
+      <ellipse cx="0" cy="0" rx="10" ry="12" fill="#111827"/>
+      <!-- face -->
+      <ellipse cx="0" cy="-6" rx="6.5" ry="6" fill="#fde68a"/>
+      <!-- eyes -->
+      <circle cx="-2.2" cy="-7" r="1.3" fill="#111827"/>
+      <circle cx="2.2" cy="-7" r="1.3" fill="#111827"/>
+      <!-- beak -->
+      <path d="M-2.5 -4.5 L0 -3 L2.5 -4.5 Q0 -2.5 -2.5 -4.5 Z" fill="#f59e0b"/>
+      <!-- feet -->
+      <ellipse cx="-4.5" cy="12" rx="3" ry="2" fill="#f59e0b"/>
+      <ellipse cx="4.5" cy="12" rx="3" ry="2" fill="#f59e0b"/>
     </g>
   </defs>
 
@@ -62,65 +57,48 @@
   <!-- Subtle ring -->
   <circle cx="128" cy="128" r="116" fill="none" stroke="#e2f3ff" stroke-opacity="0.25" stroke-width="2"/>
 
-  <!-- Bust (head and shoulders) -->
+  <!-- Character and laptop inside the circle -->
   <g clip-path="url(#circleClip)">
-    <!-- Shoulders/Jacket -->
+    <!-- shoulders/jacket -->
     <path d="M36 208c16-32 60-54 92-54s76 22 92 54v36H36z" fill="#0f172a"/>
 
-    <!-- Shirt -->
-    <path d="M88 206c10-22 24-34 40-34s30 12 40 34" fill="#ffffff" opacity="0.95"/>
-    <path d="M120 174l8 12 8-12" fill="#14b8a6"/>
+    <!-- hoodie -->
+    <path d="M80 200c10-28 28-44 48-44s38 16 48 44" fill="#111827"/>
 
-    <!-- Neck -->
-    <rect x="116" y="136" width="24" height="20" rx="6" fill="#f6c7a6"/>
+    <!-- neck -->
+    <rect x="116" y="130" width="24" height="18" rx="6" fill="#f6c7a6"/>
 
-    <!-- Face -->
-    <ellipse cx="128" cy="120" rx="38" ry="40" fill="#f6c7a6"/>
+    <!-- head -->
+    <ellipse cx="128" cy="112" rx="34" ry="36" fill="#f6c7a6"/>
 
-    <!-- Ears -->
-    <ellipse cx="90" cy="120" rx="6.5" ry="9" fill="#f4bfa0"/>
-    <ellipse cx="166" cy="120" rx="6.5" ry="9" fill="#f4bfa0"/>
+    <!-- hair -->
+    <path d="M96 110c0-22 14-36 32-36s32 14 32 30c-7-5-16-9-30-9s-25 3.6-34 10.6z" fill="#0b132b"/>
 
-    <!-- Hair -->
-    <path d="M92 116c0-24 14-40 36-40s36 16 36 36c-8-6-18-10-34-10s-28 4-38 14z" fill="#0b132b"/>
-    <path d="M96 102c6-8 16-14 32-14 18 0 32 8 40 20-2-20-18-36-40-36-22 0-36 14-40 30 2-2 5-0 8 0z" fill="#151a2f" opacity="0.8"/>
+    <!-- brows -->
+    <rect x="108" y="112" width="13" height="3" rx="1.5" fill="#1f2937"/>
+    <rect x="139" y="112" width="13" height="3" rx="1.5" fill="#1f2937"/>
 
-    <!-- Brows -->
-    <rect x="106" y="118" width="14" height="3" rx="1.5" fill="#1f2937"/>
-    <rect x="136" y="118" width="14" height="3" rx="1.5" fill="#1f2937"/>
+    <!-- eyes -->
+    <circle cx="114" cy="120" r="2.2" fill="#0b132b"/>
+    <circle cx="142" cy="120" r="2.2" fill="#0b132b"/>
 
-    <!-- Glasses -->
-    <g>
-      <rect x="100" y="124" width="22" height="12" rx="3" fill="none" stroke="#0ea5e9" stroke-width="2"/>
-      <rect x="134" y="124" width="22" height="12" rx="3" fill="none" stroke="#0ea5e9" stroke-width="2"/>
-      <line x1="122" y1="130" x2="134" y2="130" stroke="#0ea5e9" stroke-width="2"/>
-      <circle cx="110" cy="130" r="2" fill="#0ea5e9"/>
-      <circle cx="146" cy="130" r="2" fill="#0ea5e9"/>
+    <!-- mouth -->
+    <path d="M118 132c6 6 16 6 20 0" stroke="#b57e6d" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- laptop base -->
+    <rect x="76" y="156" width="104" height="62" rx="8" fill="#111827" stroke="#1f2937" stroke-width="2"/>
+    <rect x="90" y="170" width="76" height="34" rx="4" fill="#0b1220"/>
+
+    <!-- Linux sticker on laptop -->
+    <g transform="translate(152,178) scale(0.9)">
+      <use href="#tux-sticker"/>
     </g>
 
-    <!-- Nose + mouth (subtle) -->
-    <path d="M128 132c0 3-2 6-4 7" stroke="#ce9d87" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M118 146c6 6 16 6 22 0" stroke="#b57e6d" stroke-width="2" fill="none" stroke-linecap="round"/>
-
-    <!-- Jacket collar -->
-    <path d="M96 206l22-20 10 12 10-12 22 20" fill="#0b1026"/>
-
-    <!-- Lapel highlights -->
-    <path d="M118 186l-8 12" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/>
-    <path d="M146 186l8 12" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/>
-
-    <!-- Icons -->
-    <g opacity="0.95">
-      <g transform="translate(62,190)">
-        <use href="#icon-gear"/>
-      </g>
-      <g transform="translate(196,190)">
-        <use href="#icon-terminal"/>
-      </g>
-    </g>
+    <!-- hands on laptop -->
+    <ellipse cx="102" cy="190" rx="9" ry="6" fill="#f4bfa0"/>
+    <ellipse cx="154" cy="190" rx="9" ry="6" fill="#f4bfa0"/>
   </g>
 
-  <!-- Subtle foreground vignette for depth -->
+  <!-- shadow -->
   <ellipse cx="128" cy="232" rx="76" ry="10" fill="#0b1026" opacity="0.18"/>
 </svg>
-
