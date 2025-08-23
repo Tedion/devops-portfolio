@@ -28,7 +28,7 @@ const About = () => {
 
         <div className="max-w-5xl mx-auto mb-12">
           <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-            <h3 className="text-2xl font-bold text-olive-400 mb-4">Professional Summary</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Professional Summary</h3>
             <p className="text-gray-300 leading-relaxed">
               Mid-level DevOps Engineer with a strong foundation in building, automating, and securing scalable infrastructures across cloud and on-premise platforms. Experienced in containerization and orchestration with Docker and Kubernetes (RKE2); infrastructure automation with Terraform, Terragrunt, and Ansible; CI/CD pipelines using Jenkins and GitLab; network architecture and secure access with Nginx, Apache, HAProxy, and Keycloak; and monitoring/logging with Zabbix, Prometheus, Grafana, and the ELK stack. Committed to delivering robust solutions that enhance performance, security, and deployment agility in dynamic environments.
             </p>

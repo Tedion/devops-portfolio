@@ -7,7 +7,10 @@ const Hero = () => {
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })
   }
 
-  const avatarUrl = (import.meta.env.VITE_AVATAR_URL || '/avatar.png')
+  const avatarUrl = (
+    import.meta.env.VITE_AVATAR_URL ||
+    'https://api.dicebear.com/7.x/notionists/svg?seed=DevOpsEngineer&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50'
+  )
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20">
@@ -125,7 +128,7 @@ const Hero = () => {
                     alt="Profile avatar"
                     className="w-48 h-48 drop-shadow-md object-cover"
                     loading="lazy"
-                    onError={(e) => { e.currentTarget.src = 'https://api.dicebear.com/7.x/notionists/svg?seed=Tedion&skinColor=8d5524,5d4037,3d2b1f&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50' }}
+                    onError={(e) => { e.currentTarget.src = 'https://api.dicebear.com/7.x/notionists/svg?seed=DevOpsEngineer&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50' }}
                   />
                 </div>
               </div>
