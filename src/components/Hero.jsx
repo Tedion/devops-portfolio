@@ -123,7 +123,7 @@ const Hero = () => {
                   <img
                     src="https://t4.ftcdn.net/jpg/06/07/74/09/360_F_607740941_Mn3oZHrCtgbAw6lNCTIguj06voxR3oPJ.jpg"
                     alt="Professional avatar"
-                    className="w-full h-full object-contain p-6 drop-shadow-md"
+                    className="w-full h-full object-cover object-center drop-shadow-md"
                     loading="lazy"
                     onError={(e) => { e.currentTarget.src = '/devops-avatar.svg' }}
                   />
