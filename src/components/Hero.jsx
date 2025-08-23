@@ -119,7 +119,7 @@ const Hero = () => {
             <div className="relative">
               {/* Profile Image Placeholder */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
-                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden ring-1 ring-white/10">
+                <div className="w-72 h-72 lg:w-[22rem] lg:h-[22rem] rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden ring-1 ring-white/10">
                   <img
                     src="https://t4.ftcdn.net/jpg/06/07/74/09/360_F_607740941_Mn3oZHrCtgbAw6lNCTIguj06voxR3oPJ.jpg"
                     alt="Professional avatar"
