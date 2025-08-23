@@ -7,10 +7,9 @@ const Hero = () => {
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })
   }
 
-  const avatarUrl = (
-    import.meta.env.VITE_AVATAR_URL ||
-    'https://api.dicebear.com/7.x/adventurer/svg?seed=Jonathan&hair=short10&beard=medium&accessoriesProbability=0&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50'
-  )
+  const localAvatar = '/devops-avatar.svg'
+  const defaultAvatar = 'https://api.dicebear.com/7.x/adventurer/svg?seed=DevOpsPro&hair=short10&beard=medium&accessories=glasses&accessoriesProbability=100&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50'
+  const avatarUrl = import.meta.env.VITE_AVATAR_URL || localAvatar
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20">
@@ -122,13 +121,13 @@ const Hero = () => {
             <div className="relative">
               {/* Profile Image Placeholder */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
-                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden ring-1 ring-white/10">
                   <img
                     src={avatarUrl}
-                    alt="Profile avatar"
-                    className="w-48 h-48 drop-shadow-md object-cover"
+                    alt="Professional DevOps avatar"
+                    className="w-full h-full object-contain p-6 drop-shadow-md"
                     loading="lazy"
-                    onError={(e) => { e.currentTarget.src = 'https://api.dicebear.com/7.x/adventurer/svg?seed=Jonathan&hair=short10&beard=medium&accessoriesProbability=0&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50' }}
+                    onError={(e) => { e.currentTarget.src = defaultAvatar }}
                   />
                 </div>
               </div>
