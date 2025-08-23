@@ -7,8 +7,7 @@ const Hero = () => {
     document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })
   }
 
-  const defaultAvatar = 'https://api.dicebear.com/7.x/adventurer/svg?seed=DevOpsPro&hair=short10&beard=medium&accessories=glasses&accessoriesProbability=100&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50'
-  const avatarUrl = 'https://share.google/images/pxBW4j8LSyMEPFYI4'
+  
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-950 to-black pt-20">
@@ -122,11 +121,11 @@ const Hero = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center animate-float">
                 <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden ring-1 ring-white/10">
                   <img
-                    src={avatarUrl}
-                    alt="Professional DevOps avatar"
+                    src="/devops-avatar.svg"
+                    alt="Professional avatar"
                     className="w-full h-full object-contain p-6 drop-shadow-md"
                     loading="lazy"
-                    onError={(e) => { e.currentTarget.src = defaultAvatar }}
+                    onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
                 </div>
               </div>
