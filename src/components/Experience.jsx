@@ -99,7 +99,7 @@ Implementing an efficient Program and Beneficiary Management System to enable be
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-olive-400 mb-4">Professional Experience</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Professional Experience</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             My journey in DevOps and cloud engineering, building scalable solutions
           </p>
@@ -135,7 +135,7 @@ Implementing an efficient Program and Beneficiary Management System to enable be
                         <Calendar size={16} className="mr-2" />
                         {exp.period}
                       </div>
-                      <h3 className="text-xl font-bold text-olive-400 mb-1">{exp.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
                       <div className="flex items-center text-gray-300 mb-2">
                         <Briefcase size={16} className="mr-2" />
                         {exp.company}

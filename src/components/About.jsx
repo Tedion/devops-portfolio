@@ -20,7 +20,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-olive-400 mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             DevOps Engineer with a passion for automation and cloud technologies — open to remote opportunities
           </p>
@@ -83,7 +83,7 @@ const About = () => {
                 <div className="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-primary-400" size={24} />
                 </div>
-                <div className="text-3xl font-bold text-olive-400 mb-2">{stat.value}</div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>
               </motion.div>
             ))}
