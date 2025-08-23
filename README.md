@@ -102,3 +102,35 @@ Test email locally after setting `.env`:
 npm run server
 # POST to http://localhost:5000/api/contact with { name, email, subject, message }
 ```
+
+## Deployment
+
+### Backend (Render)
+
+1. Create a new Web Service from this repo using Render.
+2. Use the included `render.yaml` (Blueprint) or configure manually:
+   - Runtime: Node
+   - Build command: `npm install`
+   - Start command: `node server/index.js`
+   - Persistent disk: mount to `/opt/render/project/src/server/_inbox` (1 GB) for contact storage fallback
+3. Environment variables:
+   - `NODE_ENV=production`
+   - `CORS_ORIGIN=https://<your-username>.github.io` (exact origin, no trailing slash)
+   - Optional SMTP if you want email delivery:
+     - `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS`, `SMTP_PORT` (587 default), `FROM_EMAIL`, `TO_EMAIL`
+
+### Frontend (GitHub Pages)
+
+1. Set repository Settings → Pages → Build from GitHub Actions.
+2. Add repository variables and secrets:
+   - Repository variable `VITE_BASE` = `/<your-repo-name>/`
+   - Repository secret `VITE_API_BASE` = `https://<your-backend-domain>/api`
+3. Push to `main` (or run the workflow manually). The workflow at `.github/workflows/deploy-pages.yml` will:
+   - Install deps, build with the variables above
+   - Publish `dist/` to Pages
+
+### Verify
+
+- Open your site on GitHub Pages and submit the contact form.
+- Network request should POST to `https://<your-backend-domain>/api/contact` and return `{ ok: true, ... }`.
+- If you see CORS errors, ensure `CORS_ORIGIN` exactly matches your Pages origin.
