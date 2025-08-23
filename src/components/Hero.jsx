@@ -9,7 +9,7 @@ const Hero = () => {
 
   const avatarUrl = (
     import.meta.env.VITE_AVATAR_URL ||
-    'https://api.dicebear.com/7.x/notionists/svg?seed=DevOpsEngineer&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50'
+    'https://api.dicebear.com/7.x/adventurer/svg?seed=Jonathan&hair=short10&beard=medium&accessoriesProbability=0&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50'
   )
 
   return (
@@ -128,7 +128,7 @@ const Hero = () => {
                     alt="Profile avatar"
                     className="w-48 h-48 drop-shadow-md object-cover"
                     loading="lazy"
-                    onError={(e) => { e.currentTarget.src = 'https://api.dicebear.com/7.x/notionists/svg?seed=DevOpsEngineer&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50' }}
+                    onError={(e) => { e.currentTarget.src = 'https://api.dicebear.com/7.x/adventurer/svg?seed=Jonathan&hair=short10&beard=medium&accessoriesProbability=0&backgroundColor=0b1220&backgroundType=gradientLinear&radius=50' }}
                   />
                 </div>
               </div>
