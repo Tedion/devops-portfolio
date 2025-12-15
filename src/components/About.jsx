@@ -45,7 +45,7 @@ const About = () => {
           >
             <p className="text-lg text-gray-300 leading-relaxed">
               DevOps/SRE engineer specializing in Kubernetes platforms, secure networking, and high-availability
-              systems across government, banking, and platform engineering. I\'ve delivered 99.95% uptime for
+              systems across government, banking, and platform engineering. I've delivered 99.95% uptime for
               mobile banking, cut deployment times from 4 hours to 15 minutes with CI/CD, and reduced infra costs
               by ~35% through hybrid cloud optimization.
             </p>
@@ -58,7 +58,7 @@ const About = () => {
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              Currently leading Ethiopia\'s OpenG2P initiatives with ATI, MoWSA, and EDRMC—standing up secure, scalable
+              Currently leading Ethiopia's OpenG2P initiatives with ATI, MoWSA, and EDRMC—standing up secure, scalable
               platforms for farmer registries, social registries, and benefits delivery; planning ODK → OpenG2P data
               migration with validation and auditability. Open to remote opportunities.
             </p>
